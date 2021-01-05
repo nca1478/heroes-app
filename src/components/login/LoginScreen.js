@@ -1,10 +1,19 @@
 import React from 'react'
 
-export const LoginScreen = () => {
+export const LoginScreen = ({ history }) => {
+  const handleClick = () => {
+    // history.push('/marvel')
+    history.replace('/marvel')
+  }
+
   return (
-    <div>
-      <h1>LoginScreen</h1>
+    <div className="container">
+      <h1>Login</h1>
       <hr />
+
+      <button onClick={handleClick} className="btn btn-primary">
+        Login
+      </button>
     </div>
   )
 }
